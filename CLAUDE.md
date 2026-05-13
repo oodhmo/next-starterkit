@@ -95,14 +95,23 @@ ThemeProvider → TooltipProvider → {children} + <Toaster />
 - `Toaster`는 `ThemeProvider` 내부에 있어야 다크모드 적용 (`theme="system"`)
 - `TooltipProvider`가 전역 래핑되므로 개별 컴포넌트에서 추가 래핑 불필요
 
-## 커스텀 훅 (5개)
+## 훅
 
-모두 `"use client"` 전용:
+### usehooks-ts (외부 라이브러리)
+
+`"use client"` 환경에서 사용. import 경로: `usehooks-ts`
 
 | 훅 | 시그니처 | 반환 |
 |----|---------|------|
 | `useLocalStorage<T>` | `(key, initialValue)` | `[value, setValue, removeValue]` |
 | `useMediaQuery` | `(query)` | `boolean` |
+
+### 커스텀 훅 (3개, hooks/)
+
+모두 `"use client"` 전용:
+
+| 훅 | 시그니처 | 반환 |
+|----|---------|------|
 | `useDebounce<T>` | `(value, delay?)` | `T` (기본 300ms) |
 | `useCopyToClipboard` | `(resetDelay?)` | `{ copied, copy }` (기본 2000ms) |
 | `useIntersectionObserver<T>` | `(options?)` | `[ref, isIntersecting]` |

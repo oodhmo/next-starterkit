@@ -40,7 +40,7 @@ const folderStructure = `next-starterkit/
 │   ├── layout/           # Header, Footer, SidebarLayout, AuthLayout
 │   ├── showcase/         # 쇼케이스 컴포넌트
 │   └── docs/             # CopyButton
-├── hooks/                # 커스텀 훅 (5개)
+├── hooks/                # 커스텀 훅 (3개)
 ├── lib/                  # utils.ts, constants.ts
 └── types/                # 공통 타입`;
 
@@ -50,12 +50,14 @@ const hooks = [
     signature: "(key, initialValue)",
     returns: "[value, setValue, removeValue]",
     desc: "localStorage 연동 상태 관리",
+    source: "usehooks-ts",
   },
   {
     name: "useMediaQuery",
     signature: "(query)",
     returns: "boolean",
     desc: "CSS 미디어 쿼리 결과 반환",
+    source: "usehooks-ts",
   },
   {
     name: "useDebounce<T>",
@@ -191,12 +193,19 @@ export default function DocsPage() {
             <Separator />
 
             <section>
-              <h2 className="mb-4 text-xl font-semibold">커스텀 훅 API</h2>
+              <h2 className="mb-4 text-xl font-semibold">훅 API</h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {hooks.map((hook) => (
                   <Card key={hook.name}>
                     <CardHeader className="pb-2">
-                      <CardTitle className="font-mono text-base">{hook.name}</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="font-mono text-base">{hook.name}</CardTitle>
+                        {hook.source && (
+                          <Badge variant="outline" className="text-xs">
+                            {hook.source}
+                          </Badge>
+                        )}
+                      </div>
                     </CardHeader>
                     <CardContent className="space-y-2 text-sm">
                       <div className="rounded bg-muted/50 px-3 py-2 font-mono text-xs">
