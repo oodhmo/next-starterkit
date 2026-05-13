@@ -15,7 +15,7 @@ export function SidebarLayout({ children, sidebar }: SidebarLayoutProps) {
           {sidebar}
         </aside>
         <main className="flex-1 overflow-auto">
-          <div className="container mx-auto px-4 py-8">{children}</div>
+          <div className="container mx-auto px-20 py-8">{children}</div>
         </main>
       </div>
       <Footer />

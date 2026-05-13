@@ -72,7 +72,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="container mx-auto px-4 py-24 text-center">
+        <section className="container mx-auto px-20 py-24 text-center">
           <Badge variant="outline" className="mb-4">
             <Star className="mr-1 h-3 w-3" />
             프로덕션 레디 스타터킷
@@ -106,7 +106,7 @@ export default function HomePage() {
         <Separator />
 
         {/* Tech Stack Badges */}
-        <section className="container mx-auto px-4 py-10">
+        <section className="container mx-auto px-20 py-10">
           <div className="flex flex-wrap justify-center gap-2">
             {TECH_STACK.map((tech) => (
               <Badge key={tech.name} variant="secondary" className="text-sm">
@@ -119,7 +119,7 @@ export default function HomePage() {
         <Separator />
 
         {/* Features Grid */}
-        <section className="container mx-auto px-4 py-20">
+        <section className="container mx-auto px-20 py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">
             포함된 기술 스택
           </h2>
@@ -148,7 +148,7 @@ export default function HomePage() {
         <Separator />
 
         {/* Component Demo */}
-        <section className="container mx-auto px-4 py-20">
+        <section className="container mx-auto px-20 py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">
             컴포넌트 미리보기
           </h2>
