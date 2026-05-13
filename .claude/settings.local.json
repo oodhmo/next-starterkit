@@ -3,9 +3,8 @@
     "allow": [
       "WebFetch",
       "Bash",
-      "Bash(Get-ChildItem *)",
-      "PowerShell(Get-Process *)",
-      "PowerShell(netstat *)"
+      "PowerShell",
+      "mcp__playwright"
     ]
   }
 }
