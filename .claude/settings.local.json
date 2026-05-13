@@ -4,7 +4,8 @@
       "WebFetch",
       "Bash",
       "Bash(Get-ChildItem *)",
-      "PowerShell(Get-Process *)"
+      "PowerShell(Get-Process *)",
+      "PowerShell(netstat *)"
     ]
   }
 }

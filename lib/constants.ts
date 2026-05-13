@@ -1,6 +1,7 @@
 export const SITE_NAME = "Next Starter";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export const GITHUB_URL = "https://github.com/oodhmo/next-starterkit";
 export const SITE_DESCRIPTION =
   "Next.js v15 + TypeScript + TailwindCSS v4 + shadcn/ui 스타터킷";
 

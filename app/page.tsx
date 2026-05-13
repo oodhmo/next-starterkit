@@ -24,7 +24,7 @@ import {
   Star,
   Zap,
 } from "lucide-react";
-import { SITE_NAME, TECH_STACK } from "@/lib/constants";
+import { GITHUB_URL, SITE_NAME, TECH_STACK } from "@/lib/constants";
 
 const features = [
   {
@@ -92,7 +92,7 @@ export default function HomePage() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a
-                href="https://github.com"
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
