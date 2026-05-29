@@ -43,6 +43,6 @@ next-env.d.ts
 
 # Playwright MCP
 .playwright-mcp/
-*-error.png
-*-now.png
+*.png
 dev-server.log
+
