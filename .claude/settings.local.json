@@ -6,5 +6,9 @@
       "PowerShell",
       "mcp__playwright"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "playwright"
+  ],
+  "enableAllProjectMcpServers": true
 }

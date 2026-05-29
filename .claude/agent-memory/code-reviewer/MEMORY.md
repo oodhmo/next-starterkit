@@ -1,0 +1,1 @@
+- [Next.js 스타터킷 프로젝트](project-starterkit.md) — 아키텍처 결정, 반복 패턴, 발견된 이슈 목록
