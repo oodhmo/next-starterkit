@@ -14,7 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { SITE_NAME, NAV_LINKS } from "@/lib/constants";
+import { SITE_NAME, NAV_LINKS, GITHUB_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
-      <div className="container mx-auto grid h-16 grid-cols-[1fr_auto_1fr] items-center px-20">
+      <div className="page-container grid h-16 grid-cols-[1fr_auto_1fr] items-center">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
           <Code2 className="h-5 w-5 text-primary" />
           <span>{SITE_NAME}</span>
@@ -49,7 +49,7 @@ export function Header() {
           <div className="hidden items-center gap-2 md:flex">
             <Button variant="ghost" size="icon" asChild>
               <a
-                href="https://github.com"
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type NavLink = {
   label: string;
   href: string;
@@ -26,5 +28,5 @@ export type BaseEntity = {
 };
 
 export type WithChildren<T = object> = T & {
-  children: React.ReactNode;
+  children: ReactNode;
 };

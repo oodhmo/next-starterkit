@@ -24,7 +24,18 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-const users = [
+type UserStatus = "active" | "inactive" | "pending";
+
+type User = {
+  id: number;
+  name: string;
+  email: string;
+  role: string;
+  status: UserStatus;
+  avatar: string;
+};
+
+const users: User[] = [
   { id: 1, name: "김민준", email: "minjun@example.com", role: "관리자", status: "active", avatar: "" },
   { id: 2, name: "이서연", email: "seoyeon@example.com", role: "에디터", status: "active", avatar: "" },
   { id: 3, name: "박지호", email: "jiho@example.com", role: "뷰어", status: "inactive", avatar: "" },
@@ -36,7 +47,7 @@ function getInitials(name: string) {
   return name.slice(0, 2);
 }
 
-function StatusBadge({ status }: { status: string }) {
+function StatusBadge({ status }: { status: UserStatus }) {
   const variants: Record<string, "default" | "secondary" | "destructive" | "outline"> = {
     active: "default",
     inactive: "destructive",

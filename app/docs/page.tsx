@@ -22,7 +22,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { TECH_STACK } from "@/lib/constants";
+import { TECH_STACK, GITHUB_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "문서",
@@ -104,7 +104,7 @@ export default function DocsPage() {
       <Header />
 
       <main className="flex-1">
-        <div className="container mx-auto px-20 py-8">
+        <div className="page-container py-8">
           <Breadcrumb className="mb-6">
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -166,7 +166,7 @@ export default function DocsPage() {
               <div className="space-y-4">
                 <div>
                   <p className="mb-2 text-sm text-muted-foreground">1. 저장소 클론</p>
-                  <CodeBlock code="git clone https://github.com/your-repo/next-starterkit.git" />
+                  <CodeBlock code={`git clone ${GITHUB_URL}.git`} />
                 </div>
                 <div>
                   <p className="mb-2 text-sm text-muted-foreground">2. 의존성 설치</p>

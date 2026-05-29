@@ -84,3 +84,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .page-container {
+    @apply container mx-auto px-20;
+  }
+}

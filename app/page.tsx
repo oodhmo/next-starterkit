@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -72,7 +73,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="container mx-auto px-20 py-24 text-center">
+        <section className="page-container py-24 text-center">
           <Badge variant="outline" className="mb-4">
             <Star className="mr-1 h-3 w-3" />
             프로덕션 레디 스타터킷
@@ -86,9 +87,11 @@ export default function HomePage() {
             웹개발을 즉시 시작할 수 있는 최적화된 스타터킷
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg">
-              시작하기
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="lg" asChild>
+              <Link href="/docs">
+                시작하기
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a
@@ -106,7 +109,7 @@ export default function HomePage() {
         <Separator />
 
         {/* Tech Stack Badges */}
-        <section className="container mx-auto px-20 py-10">
+        <section className="page-container py-10">
           <div className="flex flex-wrap justify-center gap-2">
             {TECH_STACK.map((tech) => (
               <Badge key={tech.name} variant="secondary" className="text-sm">
@@ -119,7 +122,7 @@ export default function HomePage() {
         <Separator />
 
         {/* Features Grid */}
-        <section className="container mx-auto px-20 py-20">
+        <section className="page-container py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">
             포함된 기술 스택
           </h2>
@@ -148,7 +151,7 @@ export default function HomePage() {
         <Separator />
 
         {/* Component Demo */}
-        <section className="container mx-auto px-20 py-20">
+        <section className="page-container py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">
             컴포넌트 미리보기
           </h2>

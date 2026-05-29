@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background font-sans`}
       >
-        <NextTopLoader showSpinner={false} color="#000000" />
+        <NextTopLoader showSpinner={false} color="var(--foreground)" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,8 +50,8 @@ export default function RootLayout({
         >
           <TooltipProvider>
             {children}
+            <Toaster theme="system" richColors />
           </TooltipProvider>
-          <Toaster theme="system" richColors />
         </ThemeProvider>
       </body>
     </html>

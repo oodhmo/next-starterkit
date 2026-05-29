@@ -1,14 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Code2 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME, GITHUB_URL } from "@/lib/constants";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="w-full border-t bg-background">
-      <div className="container mx-auto px-20 py-10">
+      <div className="page-container py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-3">
             <div className="flex items-center gap-2 font-bold">
@@ -49,7 +51,7 @@ export function Footer() {
               {[
                 { label: "문서", href: "/docs" },
                 { label: "컴포넌트", href: "/components" },
-                { label: "GitHub", href: "https://github.com" },
+                { label: "GitHub", href: GITHUB_URL },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
